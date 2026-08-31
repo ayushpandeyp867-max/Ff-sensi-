@@ -1,10 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LAST HOPE</title><style>body{background:#11052e;color:white;text-align:center;font-family:Arial;padding:20px}button{background:#a855f7;color:white;padding:15px 30px;border:none;border-radius:10px;font-size:20px;margin-top:15px}</style></head>
-<body>
-<h1>🔥 LAST HOPE 🔥</h1>
-<h3>100% Headshot Sensi</h3>
-<button onclick="document.getElementById('res').innerHTML='General: 100<br>Red Dot: 96<br>2x: 92<br>4x: 88<br>AWM: 80<br>Free Look: 75<br><br>Site ON hai bhai! 🔥'">GENERATE SENSI</button>
-<div id="res" style="margin-top:20px;font-size:22px;color:yellow"></div>
-</body>
-</html>
+<script>
+function generate(){
+ let device = document.getElementById('device').value;
+ let ram = document.getElementById('ram').value;
+ let base = 100;
+
+ // Device ke hisab se sensi logic
+ if(device.includes("Redmi") || device.includes("POCO")) base = 100;
+ else if(device.includes("Realme")) base = 98;
+ else if(device.includes("Samsung")) base = 95;
+ else if(device.includes("Infinix") || device.includes("Tecno")) base = 100;
+ else if(device.includes("OnePlus")) base = 92;
+ else if(device.includes("Vivo") || device.includes("iQOO") || device.includes("Oppo")) base = 96;
+
+ // RAM ke hisab se thoda adjust
+ if(ram=="4") base = base - 1;
+ if(ram=="12") base = base - 2;
+
+ let rand=(a,b)=> base - Math.floor(Math.random()*(b-a+1)+a);
+ g.innerText=base; 
+ r.innerText=rand(2,6); 
+ s2.innerText=rand(5,10); 
+ s4.innerText=rand(11,16); 
+ awm.innerText=rand(18,24); 
+ fl.innerText=rand(26,35);
+ 
+ document.getElementById('res').style.display='block';
+ res.scrollIntoView({behavior:'smooth'});
+}
+</script>
