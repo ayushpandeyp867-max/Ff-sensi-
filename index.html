@@ -1,1 +1,57 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>90% ONETAP</title><style>body{background:#000;color:#fff;font-family:Arial;padding:15px}.box{max-width:380px;margin:auto;background:#111;border:2px solid red;border-radius:15px;padding:20px}h1{text-align:center;color:red}input{width:100%;padding:12px;margin:8px 0;background:#222;border:1px solid #444;color:#fff;border-radius:8px}button{width:100%;padding:14px;background:red;border:none;color:#fff;font-weight:bold;border-radius:10px}#r{display:none;margin-top:15px;background:#000;border:1px solid red;padding:15px;border-radius:10px}.i{display:flex;justify-content:space-between;padding:8px;border-bottom:1px solid #222}.i b{color:#0f0}</style></head><body><div class="box"><h1>🔥 90% ONETAP 🔥</h1><input id="ram" type="number" placeholder="RAM likho ex: 6"><button onclick="g()">GENERATE 90% SENSI 🎯</button><div id="r"><div style="text-align:center;background:#0f0;color:#000;padding:6px;border-radius:5px;font-weight:bold">🔥 90% HEADSHOT RATE 🔥</div><div class="i"><span>General:</span><b id="a"></b></div><div class="i"><span>Red Dot:</span><b id="b"></b></div><div class="i"><span>2x:</span><b id="c"></b></div><div class="i"><span>4x:</span><b id="d"></b></div><div class="i"><span>AWM:</span><b id="e"></b></div><div class="i"><span>Free Look:</span><b id="f"></b></div></div></div><script>function g(){let r=document.getElementById('ram').value;if(!r){alert('RAM dalo');return}r=parseInt(r);let a,b,c,d,e,f;if(r<=4){a=99;b=95;c=92;d=88;e=60;f=80}else if(r<=6){a=91;b=89;c=86;d=80;e=55;f=75}else{a=87;b=84;c=81;d=76;e=51;f=70}document.getElementById('a').innerText=a;document.getElementById('b').innerText=b;document.getElementById('c').innerText=c;document.getElementById('d').innerText=d;document.getElementById('e').innerText=e;document.getElementById('f').innerText=f;document.getElementById('r').style.display='block'}</script></body></html>
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>BRAZILIAN 90% ONETAP</title>
+<style>
+body{background:#000;color:#fff;font-family:Arial;text-align:center;padding:15px}
+.box{max-width:400px;margin:auto;background:#111;border:2px solid #ff0040;border-radius:20px;padding:20px;box-shadow:0 0 20px red}
+h1{color:#ff0040}
+.card{background:#000;border:1px solid #333;border-radius:12px;padding:12px;margin:8px 0;text-align:left}
+.card b{color:#00ff88;float:right}
+.btn{width:100%;padding:15px;background:linear-gradient(90deg,red,#ff0040);border:none;color:#fff;font-weight:bold;border-radius:12px;font-size:18px;margin-top:10px}
+.select{width:100%;padding:12px;background:#222;color:#fff;border:1px solid #444;border-radius:8px}
+#result{display:none}
+.badge{background:#00ff88;color:#000;padding:5px 10px;border-radius:20px;font-weight:bold;font-size:12px}
+</style></head><body>
+<div class="box">
+<h1>🇧🇷 BRAZILIAN<br>90% ONETAP</h1>
+<p>Real DPI + Fire Button Trick</p>
+<select id="ram" class="select">
+<option value="4">REDMI / POCO 4GB RAM</option>
+<option value="6">REDMI / POCO 6GB RAM</option>
+<option value="8">REDMI / POCO 8GB RAM</option>
+</select>
+<button class="btn" onclick="gen()">GET BRAZILIAN SENSI 🔥</button>
+<div id="result">
+<br><span class="badge">✅ 90% HEADSHOT RATE</span>
+<h3 id="title"></h3>
+<div class="card">DPI (Developer Option): <b id="dpi"></b></div>
+<div class="card">General: <b id="g"></b></div>
+<div class="card">Red Dot: <b id="r"></b></div>
+<div class="card">2x Scope: <b id="2x"></b></div>
+<div class="card">4x Scope: <b id="4x"></b></div>
+<div class="card">AWM: <b id="awm"></b></div>
+<div class="card">Free Look: <b id="fl"></b></div>
+<div class="card">Fire Button Size: <b id="fire"></b></div>
+<div class="card">Joystick Size: <b id="joy"></b></div>
+<p style="color:#ff0;font-size:13px">Trick: Fire button 42% rakho + halka upar drag = One Tap</p>
+</div>
+</div>
+<script>
+function gen(){
+let ram=document.getElementById('ram').value;
+let dpi,g,r,x2,x4,awm,fl,fire,joy,title;
+if(ram==4){title="FOR 4GB - ULTRA FAST";dpi="411";g=92;r=88;x2=80;x4=75;awm=52;fl=70;fire="42%";joy="50%"}
+else if(ram==6){title="FOR 6GB - BALANCED";dpi="500";g=89;r=85;x2=77;x4=72;awm=50;fl=68;fire="45%";joy="55%"}
+else{title="FOR 8GB - SMOOTH";dpi="600";g=86;r=82;x2=75;x4=70;awm=48;fl=65;fire="48%";joy="58%"}
+document.getElementById('title').innerText=title;
+document.getElementById('dpi').innerText=dpi;
+document.getElementById('g').innerText=g;
+document.getElementById('r').innerText=r;
+document.getElementById('2x').innerText=x2;
+document.getElementById('4x').innerText=x4;
+document.getElementById('awm').innerText=awm;
+document.getElementById('fl').innerText=fl;
+document.getElementById('fire').innerText=fire;
+document.getElementById('joy').innerText=joy;
+document.getElementById('result').style.display='block';
+}
+</script></body></html>
