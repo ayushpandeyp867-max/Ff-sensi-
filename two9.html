@@ -1,0 +1,36 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TWO9 REAL SENSI</title><style>
+body{background:#000;color:#fff;font-family:Arial;text-align:center;padding:10px}
+.box{max-width:420px;margin:auto;background:#0e0e0e;border:3px solid #a100ff;border-radius:20px;padding:18px}
+h1{color:#a100ff;margin:5px} .input,.sel{width:92%;padding:13px;background:#000;border:2px solid #444;color:#fff;border-radius:12px;font-size:16px;margin:6px 0}
+.sel{border-color:#a100ff} .card{background:#000;border:1px solid #333;border-radius:11px;padding:12px;margin:7px 0;text-align:left}
+.card b{color:#a100ff;float:right} .card.real{border-color:#a100ff;background:#150025}
+.btn{width:100%;padding:15px;background:#a100ff;border:none;color:#fff;font-weight:bold;border-radius:13px;font-size:19px;margin-top:10px}
+</style></head><body><div class="box">
+<h1>👑 TWO9 <span style="font-size:12px;background:#a100ff;color:#fff;padding:3px 8px;border-radius:10px">2GB KING</span></h1><p style="color:#888;font-size:12px">Zero Lag + Fastest Drag Config</p>
+<input id="device" class="input" placeholder="Device Likh - Ex: Redmi 10">
+<select id="ram" class="sel">
+<option value="2">2GB RAM - Ultra Low</option>
+<option value="4" selected>4GB RAM - Low</option>
+<option value="6">6GB RAM</option>
+<option value="8">8GB RAM</option>
+</select>
+<button class="btn" onclick="gen()">GET TWO9 SENSI ⚡</button>
+<div id="res" style="display:none;margin-top:15px">
+<p style="color:#a100ff;font-weight:bold;font-size:19px">🎯 <span id="dn">DEVICE</span> - TWO9</p>
+<div class="card real">General: <b>100</b></div>
+<div class="card real">Red Dot: <b>100</b></div>
+<div class="card real">2x Scope: <b>95</b></div>
+<div class="card real">4x Scope: <b>90</b></div>
+<div class="card real">Sniper Scope: <b>70</b></div>
+<div class="card real">Free Look: <b>80</b></div>
+<div class="card">DPI: <b id="dpi">400</b></div>
+<div class="card">Fire Button: <b id="fire">15%</b></div>
+<div class="card">Touch Speed: <b id="touch">Ultra Fast</b></div>
+<p style="color:#666;font-size:10px;margin-top:10px">Source: TWO9 / BU DA LOVE - Fastest Movement</p>
+</div></div><script>
+function gen(){
+let d=document.getElementById('device').value||'MY DEVICE';let r=document.getElementById('ram').value;
+document.getElementById('dn').innerText=d.toUpperCase();document.getElementById('res').style.display='block';
+if(r=='2'){dpi.innerText='360';fire.innerText='12%';touch.innerText='Ultra Fast';} else if(r=='4'){dpi.innerText='400';fire.innerText='15%';touch.innerText='Fast';} else if(r=='6'){dpi.innerText='450';fire.innerText='18%';touch.innerText='Balanced';} else {dpi.innerText='500';fire.innerText='20%';touch.innerText='Smooth';}
+}
+</script></body></html>
