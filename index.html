@@ -1,97 +1,45 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ALL DEVICE + AIM ASSIST</title><style>
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CUSTOM SENSI</title><style>
 body{background:#000;color:#fff;font-family:Arial;text-align:center;padding:15px;margin:0}
-.box{max-width:420px;margin:auto;background:#111;border:2px solid #00ff88;border-radius:20px;padding:20px;box-shadow:0 0 25px #00ff8855}
-h1{color:#00ff88;margin:5px}
-.card{background:#000;border:1px solid #333;border-radius:10px;padding:11px;margin:7px 0;text-align:left}
-.card b{color:#00ff88;float:right}
-.card.a{border-color:#00ff88;background:#002a14}
-.btn{width:100%;padding:15px;background:linear-gradient(90deg,#00ff88,#00cc66);border:none;color:#000;font-weight:bold;border-radius:12px;font-size:18px;margin-top:10px}
-.select{width:100%;padding:12px;background:#222;color:#fff;border:1px solid #444;border-radius:8px;margin:5px 0}
-#result{display:none}
-.badge{background:#00ff88;color:#000;padding:6px 12px;border-radius:20px;font-weight:bold;font-size:12px}
-.badge2{background:red;color:#fff;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:bold}
+.box{max-width:420px;margin:auto;background:#111;border:2px solid #00ff88;border-radius:20px;padding:20px}
+h1{color:#00ff88;margin:5px} .card{background:#000;border:1px solid #333;border-radius:10px;padding:11px;margin:7px 0;text-align:left}
+.card b{color:#00ff88;float:right} .card.a{border-color:#00ff88;background:#002a14}
+.btn{width:100%;padding:15px;background:#00ff88;border:none;color:#000;font-weight:bold;border-radius:12px;font-size:18px;margin-top:10px}
+.input,.select{width:100%;padding:12px;background:#222;color:#fff;border:1px solid #444;border-radius:8px;margin:5px 0;box-sizing:border-box}
+#result{display:none} .badge{background:#00ff88;color:#000;padding:6px 12px;border-radius:20px;font-weight:bold;font-size:12px}
 </style></head><body><div class="box">
-<h1>🎯 ALL DEVICE<br>AIM ASSIST PRO</h1>
-<p style="color:#aaa;font-size:13px">Brazilian + Aim Lock Trick</p>
-
-<select id="device" class="select">
-<option value="ALL">📱 ALL ANDROID</option>
-<option value="SAMSUNG">SAMSUNG M/F/A</option>
-<option value="REDMI">REDMI / POCO</option>
-<option value="REALME">REALME / NARZO</option>
-<option value="OPPO">OPPO / RENO</option>
-<option value="VIVO">VIVO / IQOO</option>
-<option value="INFINIX">INFINIX / TECNO</option>
-<option value="ONEPLUS">ONEPLUS</option>
-</select>
-
+<h1>🎯 CUSTOM DEVICE<br>AIM ASSIST PRO</h1>
+<p style="color:#aaa;font-size:12px">Type Your Device Name</p>
+<input id="device" class="input" placeholder="Ex: Samsung A14, Infinix Hot 40, Vivo T2">
 <select id="ram" class="select">
-<option value="4">4GB RAM</option>
-<option value="6">6GB RAM</option>
-<option value="8">8GB RAM</option>
-<option value="12">12GB RAM</option>
+<option value="4">4GB RAM</option><option value="6">6GB RAM</option><option value="8">8GB RAM</option><option value="12">12GB RAM</option>
 </select>
-
-<select id="play" class="select">
-<option value="2">2 Finger + Thumb</option>
-<option value="3">3 Finger Claw</option>
-<option value="4">4 Finger Claw</option>
-</select>
-
-<button class="btn" onclick="gen()">GET AIM ASSIST SENSI 🔥</button>
-
-<div id="result"><br><span class="badge">✅ AIM LOCK ON</span> <span class="badge2">90% HEADSHOT</span>
+<button class="btn" onclick="gen()">GET SENSI 🔥</button>
+<div id="result"><br><span class="badge">✅ AIM LOCK ON</span>
 <h3 id="title" style="color:#ff0"></h3>
-
-<div class="card a">🎯 Aim Assist: <b id="aim">ON</b></div>
-<div class="card a">🔒 Aim Lock: <b id="lock">HIGH</b></div>
+<div class="card a">Aim Assist: <b>ON</b></div>
+<div class="card a">Aim Lock: <b>ACTIVE</b></div>
 <div class="card">DPI: <b id="dpi"></b></div>
 <div class="card">General: <b id="g"></b></div>
 <div class="card">Red Dot: <b id="r"></b></div>
-<div class="card">2x Scope: <b id="x2"></b></div>
-<div class="card">4x Scope: <b id="x4"></b></div>
-<div class="card">AWM Scope: <b id="awm"></b></div>
-<div class="card">Free Look: <b id="fl"></b></div>
-<div class="card">Fire Button Size: <b id="fire"></b></div>
+<div class="card">2x: <b id="x2"></b></div>
+<div class="card">4x: <b id="x4"></b></div>
+<div class="card">AWM: <b id="awm"></b></div>
+<div class="card">Fire: <b id="fire"></b></div>
 <div class="card">Joystick: <b id="joy"></b></div>
-
-<div style="background:#111;border:1px dashed #00ff88;border-radius:10px;padding:10px;margin-top:10px;text-align:left">
-<p style="color:#00ff88;font-weight:bold;margin:0">💡 AIM ASSIST TRICK:</p>
-<p id="trick" style="font-size:12px;color:#fff;margin:5px 0 0 0"></p>
-</div>
-
 </div></div>
-
 <script>
 function gen(){
-let ram=parseInt(document.getElementById('ram').value);
-let dev=document.getElementById('device').value;
-let play=document.getElementById('play').value;
-let d={};
-if(ram==4){d={g:96,r:92,x2:88,x4:82,awm:58,fl:78,dpi:"411",fire:"38%",joy:"48%",aim:"ON - STRONG",lock:"ULTRA"}}
-else if(ram==6){d={g:92,r:88,x2:82,x4:77,awm:52,fl:72,dpi:"550",fire:"42%",joy:"52%",aim:"ON - MEDIUM",lock:"HIGH"}}
-else if(ram==8){d={g:89,r:85,x2:79,x4:74,awm:50,fl:69,dpi:"650",fire:"46%",joy:"56%",aim:"ON - BALANCED",lock:"HIGH"}}
-else{d={g:86,r:82,x2:76,x4:71,awm:47,fl:66,dpi:"750",fire:"50%",joy:"60%",aim:"ON - SMOOTH",lock:"MEDIUM"}}
-
-let trick="";
-if(play=="3" || play=="4"){d.fire="42%"; trick="Claw me Fire Button left upar rakho + Drag ke sath aim assist auto lock hoga. "}
-else{trick="Thumb me Joystick 52% + Fire 42% = Best Aim Assist. "}
-
-if(dev=="SAMSUNG"){trick+="Samsung me Touch Sensitivity ko HIGH kar do."}
-else if(dev=="INFINIX"){trick+="Infinix me Game Mode ON + High FPS rakho."}
-else{trick+="Halka sa upar drag karke fire dabao = Red Number!"}
-
-document.getElementById('title').innerText=dev+" | "+ram+"GB | "+play+" Finger";
-document.getElementById('aim').innerText=d.aim;
-document.getElementById('lock').innerText=d.lock;
-document.getElementById('dpi').innerText=d.dpi;
-document.getElementById('g').innerText=d.g;
-document.getElementById('r').innerText=d.r;
-document.getElementById('x2').innerText=d.x2;
-document.getElementById('x4').innerText=d.x4;
-document.getElementById('awm').innerText=d.awm;
-document.getElementById('fl').innerText=d.fl;
-document.getElementById('fire').innerText=d.fire;
-document.getElementById('joy').innerText=d.joy;
-document.getElementById('trick').innerText=trick;
-document.getElementById('result').style.
+let dev=document.getElementById('device').value;if(dev==""){dev="YOUR DEVICE"}
+let ram=document.getElementById('ram').value;let d={};
+if(ram==4){d={g:96,r:92,x2:88,x4:82,awm:58,dpi:"411",fire:"38%",joy:"48%"}}
+else if(ram==6){d={g:92,r:88,x2:82,x4:77,awm:52,dpi:"550",fire:"42%",joy:"52%"}}
+else if(ram==8){d={g:89,r:85,x2:79,x4:74,awm:50,dpi:"650",fire:"46%",joy:"56%"}}
+else{d={g:86,r:82,x2:76,x4:71,awm:47,dpi:"750",fire:"50%",joy:"60%"}}
+document.getElementById('title').innerText=dev.toUpperCase()+" - "+ram+"GB";
+document.getElementById('dpi').innerText=d.dpi;document.getElementById('g').innerText=d.g;
+document.getElementById('r').innerText=d.r;document.getElementById('x2').innerText=d.x2;
+document.getElementById('x4').innerText=d.x4;document.getElementById('awm').innerText=d.awm;
+document.getElementById('fire').innerText=d.fire;document.getElementById('joy').innerText=d.joy;
+document.getElementById('result').style.display='block';
+}
+</script></body></html>
