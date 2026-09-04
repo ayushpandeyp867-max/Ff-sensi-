@@ -1,26 +1,37 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NOBRU SENSI 2026</title><style>
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NOBRU REAL SENSI</title><style>
 body{background:#000;color:#fff;font-family:Arial;text-align:center;padding:10px}
-.box{max-width:420px;margin:auto;background:#111;border:3px solid #ff0040;border-radius:20px;padding:20px;box-shadow:0 0 20px #ff004044}
-h1{color:#ff0040;font-size:28px;margin:5px} .input{width:90%;padding:14px;background:#000;border:2px solid #ff0040;color:#fff;border-radius:12px;font-size:17px;text-align:center}
-.card{background:#000;border:1px solid #333;border-radius:12px;padding:13px;margin:8px 0;text-align:left;font-size:17px}
-.card b{color:#ff0040;float:right;font-size:18px} .btn{width:100%;padding:16px;background:linear-gradient(90deg,#ff0040,#ff6a00);border:none;color:#fff;font-weight:bold;border-radius:14px;font-size:20px;margin-top:15px}
-.badge{background:#ff0040;padding:5px 15px;border-radius:20px;font-weight:bold}
+.box{max-width:420px;margin:auto;background:#0e0e0e;border:3px solid #ff0040;border-radius:20px;padding:18px}
+h1{color:#ff0040;margin:5px} .input,.sel{width:92%;padding:13px;background:#000;border:2px solid #444;color:#fff;border-radius:12px;font-size:16px;margin:6px 0}
+.sel{border-color:#ff0040} .card{background:#000;border:1px solid #333;border-radius:11px;padding:12px;margin:7px 0;text-align:left}
+.card b{color:#ff0040;float:right} .card.real{border-color:#ff0040;background:#1a0008}
+.btn{width:100%;padding:15px;background:#ff0040;border:none;color:#fff;font-weight:bold;border-radius:13px;font-size:19px;margin-top:10px}
 </style></head><body><div class="box">
-<h1>🇧🇷 NOBRU</h1><p class="badge">FLUXO OFFICIAL SENSI 2026</p>
-<input id="device" class="input" placeholder="Apna Device Likho - Samsung A14"><br><br>
-<button class="btn" onclick="show()">GET MY NOBRU SENSI 🔥</button>
-<div id="res" style="display:none;margin-top:20px">
-<p style="font-size:22px;color:#ff0040;font-weight:bold">🔥 <span id="dn">DEVICE</span> - NOBRU SENSI</p>
-<div class="card">General: <b>100</b></div>
-<div class="card">Red Dot: <b>98</b></div>
-<div class="card">2x Scope: <b>96</b></div>
-<div class="card">4x Scope: <b>94</b></div>
-<div class="card">Sniper Scope: <b>68</b></div>
-<div class="card">Free Look: <b>82</b></div>
-<div class="card" style="border-color:#ff0040;background:#2a0010">DPI: <b>750</b></div>
-<div class="card" style="border-color:#ff0040;background:#2a0010">Fire Button: <b>26%</b></div>
-<div class="card" style="border-color:#ff0040;background:#2a0010">Quick Weapon: <b>ON</b></div>
-<p style="color:#aaa;font-size:11px;margin-top:15px">Low Device 4GB ho ya 12GB High - NOBRU yahi sensi use karta hai!<br>Drag = Short & Fast</p>
+<h1>🇧🇷 NOBRU <span style="font-size:12px;background:#ff0040;padding:3px 8px;border-radius:10px">REAL</span></h1><p style="color:#888;font-size:12px">Original Fluxo Tournament Config</p>
+<input id="device" class="input" placeholder="Device Likh - Ex: Infinix Hot 50">
+<select id="ram" class="sel">
+<option value="4">4GB RAM</option>
+<option value="6">6GB RAM</option>
+<option value="8" selected>8GB RAM</option>
+<option value="12">12GB RAM</option>
+</select>
+<button class="btn" onclick="gen()">GET REAL NOBRU SENSI 🔥</button>
+<div id="res" style="display:none;margin-top:15px">
+<p style="color:#ff0040;font-weight:bold;font-size:19px">🎯 <span id="dn">DEVICE</span> - REAL NOBRU</p>
+<div class="card real">General: <b>100</b></div>
+<div class="card real">Red Dot: <b>100</b></div>
+<div class="card real">2x Scope: <b>95</b></div>
+<div class="card real">4x Scope: <b>90</b></div>
+<div class="card real">Sniper Scope: <b>76</b></div>
+<div class="card real">Free Look: <b>100</b></div>
+<div class="card">DPI: <b id="dpi">485</b></div>
+<div class="card">Fire Button: <b id="fire">30%</b></div>
+<div class="card">RAM Optimized: <b id="ramshow">8GB</b></div>
+<p style="color:#666;font-size:10px;margin-top:10px">Source: Nobru Live Custom HUD 2025-26</p>
 </div></div><script>
-function show(){let v=document.getElementById('device').value||'MY DEVICE';document.getElementById('dn').innerText=v.toUpperCase();document.getElementById('res').style.display='block';window.scrollTo(0,400);}
+function gen(){
+let d=document.getElementById('device').value||'MY DEVICE';let r=document.getElementById('ram').value;
+document.getElementById('dn').innerText=d.toUpperCase();document.getElementById('ramshow').innerText=r+'GB';
+document.getElementById('res').style.display='block';
+if(r=='4'){dpi.innerText='410';fire.innerText='42%';} else if(r=='6'){dpi.innerText='460';fire.innerText='36%';} else if(r=='8'){dpi.innerText='485';fire.innerText='30%';} else {dpi.innerText='520';fire.innerText='28%';}
+}
 </script></body></html>
